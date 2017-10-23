@@ -15,6 +15,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('home',function(){
-    returnview('home');
-});
+//Route::get('home',function(){
+//    returnview('home');
+//});
+
+Route::get('hello/{name?}', ['as' => 'hello.index', 'uses' =>
+    'HelloController@index']);
+
